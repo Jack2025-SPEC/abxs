@@ -1,139 +1,255 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>蜥蜴高中 - 首页</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      margin: 0;
-      padding: 0;
-    }
-
-  .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-
-  .header {
-      background-color: #007BFF;
-      color: white;
-      text-align: center;
-      padding: 20px;
-    }
-
-  .header h1 {
-      margin: 0;
-    }
-
-  .nav {
-      background-color: #f4f4f4;
-      padding: 10px;
-    }
-
-  .nav ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      text-align: center;
-    }
-
-  .nav ul li {
-      display: inline;
-      margin-right: 20px;
-    }
-
-  .nav ul li a {
-      text-decoration: none;
-      color: #333;
-    }
-
-  .main-content {
-      margin-top: 30px;
-    }
-
-  .section {
-      margin-bottom: 50px;
-    }
-
-  .section h2 {
-      border-bottom: 2px solid #007BFF;
-      padding-bottom: 10px;
-    }
-
-  .footer {
-      background-color: #007BFF;
-      color: white;
-      text-align: center;
-      padding: 10px;
-      margin-top: 50px;
-    }
-
-  .research-img {
-      float: right;
-      width: 300px;
-      margin-left: 20px;
-    }
-
-  .teacher-img {
-      float: left;
-      width: 200px;
-      margin-right: 20px;
-    }
-
-  .clearfix::after {
-      content: "";
-      display: table;
-      clear: both;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AB资源服务器 - 官方主页</title>
+    <style>
+        body {
+            font-family: 'Microsoft YaHei', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #1e88e5, #0d47a1);
+            padding: 2rem 0;
+            text-align: center;
+            color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+        
+        .logo {
+            max-width: 120px;
+            margin-bottom: 1rem;
+        }
+        
+        h1 {
+            margin: 0;
+            font-size: 2rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .tagline {
+            font-style: italic;
+            margin-top: 0.5rem;
+            opacity: 0.9;
+        }
+        
+        nav {
+            background-color: #1565c0;
+            padding: 1rem;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: bold;
+            transition: opacity 0.3s;
+        }
+        
+        nav a:hover {
+            opacity: 0.8;
+            text-decoration: underline;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+        
+        section {
+            margin-bottom: 2rem;
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        h2 {
+            color: #0d47a1;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+        
+        .qq-group-info {
+            background-color: #e3f2fd;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+        }
+        
+        .group-stats {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .stat-item {
+            background-color: #bbdefb;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+        
+        .rules-list li {
+            margin-bottom: 0.8rem;
+            padding-left: 1.2rem;
+            position: relative;
+        }
+        
+        .rules-list li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #1e88e5;
+            font-weight: bold;
+        }
+        
+        .join-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #1e88e5, #0d47a1);
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 1rem;
+            transition: transform 0.3s;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        
+        .join-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+        
+        footer {
+            background-color: #0d47a1;
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .checkbox-item {
+            margin-bottom: 0.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            nav a {
+                display: block;
+                margin: 0.5rem 0;
+            }
+            
+            .group-stats {
+                flex-direction: column;
+            }
+        }
+    </style>
 </head>
-
 <body>
-  <div class="container">
-    <div class="header">
-      <h1>蜥蜴高中</h1>
-      <p>教书育人，研究蜥蜴</p >
+    <header>
+        < img src="ab_logo.png" alt="AB资源服务器标志" class="logo">
+        <h1>AB资源服务器</h1>
+        <p class="tagline">创新自律 · 公平游戏 · 舒适交流</p >
+    </header>
+    
+    <nav>
+        <a href=" ">关于我们</a >
+        <a href="#group">QQ群信息</a >
+        <a href="#rules">群规条例</a >
+        <a href="#server">服务器特色</a >
+        <a href="#join">加入我们</a >
+    </nav>
+    
+    <div class="container">
+        <section id="about">
+            <h2>关于AB资源服务器</h2>
+            <p>欢迎来到AB资源服务器！我们是一个专注于为《我的世界》玩家提供公平、舒适游戏环境的资源型服务器。</p >
+            <p>服务器创立于2024年，始终坚持"创新自律，杜绝滥用权利"的宗旨，致力于为玩家打造一个纯净的游戏交流平台。</p >
+        </section>
+        
+        <section id="group" class="qq-group-info">
+            <h2>官方QQ群信息</h2>
+            <p><strong>群名称：</strong>AB Resource Server | AB资源</p >
+            <p><strong>群号：</strong>369856947</p >
+            <p><strong>当前成员：</strong>108人</p >
+            
+            <div class="group-stats">
+                <div class="stat-item">活跃15人</div>
+                <div class="stat-item">男44人</div>
+                <div class="stat-item">南宁2人</div>
+                <div class="stat-item">00后55人</div>
+                <div class="stat-item">💬13%</div>
+                <div class="stat-item">💬40%</div>
+                <div class="stat-item">💬1%</div>
+                <div class="stat-item">💬50%</div>
+            </div>
+            
+            <div class="checkbox-item">
+                <input type="checkbox" id="build-date" checked>
+                <label for="build-date">建群时间：2024-07-23</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="interests" checked>
+                <label for="interests">兴趣：我的世界 | BloonsTD6 | 吗喽大战气球</label>
+            </div>
+        </section>
+        
+        <section id="rules">
+            <h2>群规条例</h2>
+            <p>为了维护良好的交流环境，请所有成员严格遵守以下规定：</p >
+            <ul class="rules-list">
+                <li>禁止在群内争吵或人身攻击</li>
+                <li>严禁涉及黄、赌、毒等违法信息</li>
+                <li>禁止谈论任何政治议题</li>
+                <li>群内主要用途为玩家交流和服务器公告</li>
+                <li>违反规定者将收到警告，三次警告后移出群聊</li>
+                <li>情节严重者将交由警方处理</li>
+            </ul>
+            <p>我们期待每位成员都能自觉遵守规则，共同营造和谐的交流环境。</p >
+        </section>
+        
+        <section id="server">
+            <h2>服务器特色</h2>
+            <p>AB资源服务器与其他服务器相比具有以下独特优势：</p >
+            <ul class="rules-list">
+                <li><strong>历史悠久：</strong>创立于2024年，运营经验丰富</li>
+                <li><strong>公平环境：</strong>纯资源型服务器，0盈利模式</li>
+                <li><strong>玩法经典：</strong>通过挖掘矿物升级装备的核心玩法</li>
+                <li><strong>稳定可靠：</strong>为网易我的世界联机大厅小镇专门优化</li>
+            </ul>
+            <p>我们的服务器不设任何充值渠道，确保所有玩家都在完全公平的环境下游戏。</p >
+        </section>
+        
+        <section id="join">
+            <h2>如何加入我们</h2>
+            <p>欢迎加入AB资源服务器的官方QQ群，获取最新服务器信息和玩家交流：</p >
+            <p><strong>QQ群号：369856947</strong></p >
+            <a href="https://jq.qq.com/?_wv=1027&k=YOUR_GROUP_KEY" class="join-button">立即加入QQ群</a >
+            <p>加入群聊后，请仔细阅读群公告和群规，以便更好地融入我们的社区。</p >
+        </section>
     </div>
-    <div class="nav">
-      <ul>
-        <li><a href=" ">首页</a ></li>
-        <li><a href="#">学校概况</a ></li>
-        <li><a href="#">师资力量</a ></li>
-        <li><a href="#">蜥蜴研究</a ></li>
-        <li><a href="#">招生信息</a ></li>
-        <li><a href="#">校园文化</a ></li>
-      </ul>
-    </div>
-    <div class="main-content">
-      <div class="section">
-        <h2>学校简介</h2>
-        <p>蜥蜴高中坐落于教育资源富集的知识城区，与蜚声国际的蜥蜴大学仅一街之隔，得天独厚的地理位置，让学术交流与资源共享变得轻而易举。作为蜥蜴教育集团的核心成员，它与集团旗下的蜥蜴幼儿园、蜥蜴小学、蜥蜴初中，共同构建起“一条龙”教育服务体系，为学生提供连贯且优质的教育服务，全方位助力学生成长。</p >
-        <p>学校规模宏大，占地500平方公里，校内设施一应俱全。现代化的教学楼错落有致，宽敞明亮的教室配备先进的多媒体教学设备；实验楼里各类实验室应有尽有，涵盖物理、化学、生物等多个学科，器材均为国际一流水准；藏书丰富的图书馆宛如知识的宝库，拥有海量书籍与电子资源；设施完备的体育馆设有篮球馆、游泳馆、田径场等，满足学生多样化的体育锻炼需求。校园内绿树成荫，景观优美，为师生营造出舒适宜人的学习和工作环境。</p >
-      </div>
-      <div class="section">
-        <h2>教育理念</h2>
-        <p>学校始终秉持“教书育人，研究蜥蜴”的独特宗旨。在教书育人方面，构建了一套科学多元的教育体系。基础学科教学采用互动式、启发式教学方法，激发学生学习兴趣，培养自主学习能力。同时，开设丰富的选修课程，涵盖艺术、体育、科技、人文等多个领域，满足学生个性化发展需求。积极组织研学旅行、社区服务、科技创新大赛等实践活动，全面提升学生综合素质。</p >
-      </div>
-      <div class="section clearfix">
-        <h2>师资力量</h2>
-        < img src="teacher.jpg" alt="教师团队" class="teacher-img">
-        <p>学校广纳贤才，拥有一支多元化、高素质的教师队伍。国内教师均毕业于清华、北大、复旦等国内顶尖院校以及北京师范大学、华东师范大学等知名师范类高校，教学经验丰富，平均教龄超10年。他们深入钻研教学方法，擅长将复杂知识简单化，引导学生举一反三。外籍教师来自美国、英国、加拿大等教育发达国家，毕业于哈佛、牛津、多伦多大学等国际名校，带来纯正的语言环境和国际化教学理念。在学术领域，学校汇聚了多位国内知名专家学者，他们在各自学科领域成果丰硕，发表多篇高影响力论文，出版多部学术著作。同时，还邀请了国际权威专家作为客座教授，如诺贝尔化学奖得主[教授名字1]、图灵奖获得者[教授名字2]等，定期开展讲座与指导，为师生带来前沿学术动态。此外，学校还配备了专业的心理咨询师、生涯规划师，关注学生心理健康与未来发展，帮助学生解决成长困惑，规划职业方向。</p >
-      </div>
-      <div class="section clearfix">
-        <h2>蜥蜴研究</h2>
-        < img src="research.jpg" alt="蜥蜴研究" class="research-img">
-        <p>在蜥蜴研究领域，学校不仅凭借与蜥蜴大学的紧密合作以及集团内的资源共享，更有来自世界各地的专业外籍研究员和教师定期莅临指导，取得了举世瞩目的成果。这些外籍专家带来国际前沿的研究思路和方法，与校内组建的顶尖科研团队，包括顶尖生物学专家、资深教师和优秀学生，共同围绕蜥蜴的生态习性、行为模式、物种进化、基因奥秘等展开深入研究。多篇研究成果发表于国际权威生物科学期刊，在全球学术领域引发广泛关注。校内的蜥蜴研究实验室配备国际顶尖科研设备，为研究工作提供有力支持。</p >
-      </div>
-    </div>
-    <div class="footer">
-      &copy; 2024 蜥蜴高中版权所有
-    </div>
-  </div>
+    
+    <footer>
+        <p>© 2024 AB资源服务器 - 保留所有权利</p >
+        <p>创新自律 · 杜绝滥用权利</p >
+    </footer>
 </body>
-
 </html>
+
+  
+      
